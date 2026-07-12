@@ -1,5 +1,7 @@
 # Smart Home Automation System
 
+> **Maturity: synthetic ML demonstration.** The demo simulates occupancy and energy behavior; it does not connect to a live MQTT broker or smart-home installation. Accuracy and savings values are demonstration outputs, not field-study results.
+
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://python.org)
 [![MQTT](https://img.shields.io/badge/MQTT-Protocol-blue)](https://mqtt.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
