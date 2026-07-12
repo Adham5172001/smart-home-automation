@@ -1,61 +1,23 @@
-# Smart Home Automation System
+# Smart Home Automation Modelling Demo
 
-> **Maturity: synthetic ML demonstration.** The demo simulates occupancy and energy behavior; it does not connect to a live MQTT broker or smart-home installation. Accuracy and savings values are demonstration outputs, not field-study results.
+A synthetic occupancy and energy-optimisation prototype.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://python.org)
-[![MQTT](https://img.shields.io/badge/MQTT-Protocol-blue)](https://mqtt.org)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+## Implemented
 
-An ML-powered smart home automation system that learns occupant behaviour patterns to predictively control lighting, heating, and appliances — reducing energy consumption while improving comfort.
+- Generated occupant and sensor behavior
+- Occupancy prediction
+- Simple energy-optimisation logic
+- Visual report
 
-## Features
-
-- **Behaviour learning**: Learns daily routines from sensor data using time-series clustering
-- **Predictive control**: Anticipates occupant needs 15–30 minutes in advance
-- **MQTT integration**: Real-time communication with IoT sensors and actuators
-- **Energy optimisation**: Reduces unnecessary device activation by ~34%
-- **Anomaly detection**: Flags unusual patterns (security, health monitoring)
-
-## System Architecture
-
-```
-IoT Sensors (Temperature, Motion, Light, Door)
-        │ MQTT
-  Message Broker (Mosquitto)
-        │
-  Data Ingestion Service
-        │
-  ML Pipeline:
-  ├── Behaviour Clustering (K-Means on time-series)
-  ├── Occupancy Prediction (LSTM)
-  └── Anomaly Detection (Isolation Forest)
-        │
-  Automation Rules Engine
-        │
-  Actuator Commands (MQTT)
-        │
-Smart Devices (Lights, Thermostat, Appliances)
-```
-
-## ML Models
-
-| Model | Task | Accuracy |
-|-------|------|----------|
-| LSTM (64 units) | Occupancy prediction | 91.3% |
-| K-Means (k=8) | Routine clustering | Silhouette: 0.72 |
-| Isolation Forest | Anomaly detection | F1: 0.88 |
-
-## Installation
+## Run
 
 ```bash
-git clone https://github.com/Adham5172001/smart-home-automation.git
-cd smart-home-automation
 pip install -r requirements.txt
-cp config/config.example.yaml config/config.yaml
-# Edit config.yaml with your MQTT broker details
-python main.py
+python run_demo.py
 ```
+
+This version does not connect to a live MQTT broker or physical smart-home devices. Accuracy and energy savings are generated-demo outputs, not field-study results.
 
 ## License
 
-MIT License
+[MIT](LICENSE)
